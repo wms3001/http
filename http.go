@@ -37,7 +37,6 @@ func (http *Http) Get() *goCommon.Resp {
 		request.Set(k, v)
 	}
 	res, body, errs := request.End()
-	println(res.StatusCode)
 	if res == nil {
 		resp.Code = -1
 		resp.Message = errs[0].Error()
